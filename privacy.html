@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy · Typewave</title>
+    <meta name="description" content="How Typewave handles data: your snippets stay in your browser, AI runs on your device, and an account is only needed to buy Pro." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://typewave-fenwick.vercel.app/privacy.html" />
+    <meta property="og:title" content="Privacy Policy · Typewave" />
+    <meta property="og:description" content="How Typewave handles data: your snippets stay in your browser, AI runs on your device, and an account is only needed to buy Pro." />
+    <meta property="og:image" content="https://typewave-fenwick.vercel.app/assets/og-image.png" />
+    <meta name="theme-color" content="#3450de" />
+    <link rel="icon" href="assets/favicon.png" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/m3.css" />
+    <link rel="stylesheet" href="css/site.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="/"><img src="assets/logo.png" alt="" width="32" height="32" />Typewave</a>
+        <nav class="nav" aria-label="Main">
+          <a href="/#how">How it works</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="support.html">Support</a>
+        </nav>
+        <a class="btn btn-filled" data-install href="#">Add to Chrome</a>
+      </div>
+    </header>
+    <main id="main" class="doc">
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated October 1, 2026</p>
+      <div class="callout"><p><strong>The short version:</strong> your snippets and what you type stay in your browser. Typewave's AI runs on your own computer. We only know who you are if you sign in with Google to buy Pro, and we never sell data.</p></div>
+
+      <h2>Who we are</h2>
+      <p>Typewave is a Chrome extension and website made by Fenwick Labs ("we"). Questions about privacy: <a href="mailto:support@fenwicklabs.app">support@fenwicklabs.app</a>.</p>
+
+      <h2>What stays on your computer</h2>
+      <ul>
+        <li><strong>Your snippets, folders, and settings</strong> are stored in Chrome's local storage on your computer.</li>
+        <li><strong>What you type on web pages</strong> is checked only inside your browser, only to spot a snippet shortcut you just typed. Typewave doesn't record, store, or send what you type. It never runs in password fields.</li>
+        <li><strong>Usage counts</strong> (how many times each snippet was used, characters saved per day) are kept locally to power the Insights page.</li>
+        <li><strong>AI features</strong> use Gemini Nano, the model built into Chrome, which runs on your device. Text you give the AI Writer or rewrite isn't sent to us or to any AI provider.</li>
+        <li><strong>Clipboard</strong> is read only when a snippet you insert contains the {clipboard} placeholder.</li>
+      </ul>
+
+      <h2>Sync (Pro, optional)</h2>
+      <p>If you turn on sync, Typewave copies your snippets into Chrome's own sync storage, tied to the Google account you're signed in to in Chrome. Google handles that sync under <a href="https://policies.google.com/privacy" rel="noopener">Google's Privacy Policy</a>. Typewave's servers never receive your snippets.</p>
+
+      <h2>What we collect when you buy Pro</h2>
+      <table>
+        <thead><tr><th>Data</th><th>Why</th><th>Where</th></tr></thead>
+        <tbody>
+          <tr><td>Name, email, and profile photo from Google sign-in</td><td>To link your Pro plan to you and send receipts</td><td>Supabase (our database)</td></tr>
+          <tr><td>Your plan, term, and end date</td><td>To unlock Pro in the extension</td><td>Supabase</td></tr>
+          <tr><td>Order records: amount, currency, tax, country, payment ID</td><td>Accounting, tax, refunds, and fraud checks</td><td>Supabase</td></tr>
+          <tr><td>A one-way hash of your IP address</td><td>Fraud prevention. The raw IP isn't stored.</td><td>Supabase</td></tr>
+          <tr><td>Card or PayPal details</td><td>To take payment</td><td>Handled only by PayPal or Razorpay. We never see or store them.</td></tr>
+        </tbody>
+      </table>
+      <p>Signing in keeps a secure, HttpOnly cookie on this website so the extension can ask "is this person on Pro?". The extension stores only the answer (plan and end date), in memory.</p>
+
+      <h2>Uninstall survey</h2>
+      <p>If you remove Typewave, we open a short, optional survey. Answers are stored without any identifier: just the reason, your note, and the extension version.</p>
+
+      <h2>Who we share data with</h2>
+      <p>Only the processors that run the service: Supabase (database and sign-in), Vercel (website hosting), PayPal and Razorpay (payments), and Google (sign-in). We don't sell personal information, show ads, or use tracking pixels.</p>
+
+      <h2>Chrome Web Store user data policy</h2>
+      <p>Typewave's use of information follows the <a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use" rel="noopener">Chrome Web Store User Data Policy</a>, including the Limited Use requirements. Data is used only to provide Typewave's single purpose: inserting your saved text where you type.</p>
+
+      <h2>Keeping and deleting data</h2>
+      <p>Local data is deleted when you remove the extension or use Settings → Delete all. To delete your account and purchase records (except what tax law requires us to keep), email <a href="mailto:support@fenwicklabs.app">support@fenwicklabs.app</a> from the address you signed in with. We reply within 30 days.</p>
+
+      <h2>Your rights</h2>
+      <p>Depending on where you live (for example under GDPR in the EU/UK or CCPA in California), you can ask to see, correct, export, or delete your personal data, and object to processing. Email us and we'll help.</p>
+
+      <h2>Children</h2>
+      <p>Typewave isn't directed to children under 13, and we don't knowingly collect their data.</p>
+
+      <h2>Changes</h2>
+      <p>If this policy changes, we'll update the date above. Significant changes will be announced in the extension's release notes.</p>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap">
+        <span>© <span id="year">2026</span> Fenwick Labs · Typewave</span>
+        <nav aria-label="Legal and support">
+          <a href="pricing.html">Pricing</a>
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms</a>
+          <a href="refund.html">Refund Policy</a>
+          <a href="mailto:support@fenwicklabs.app">support@fenwicklabs.app</a>
+        </nav>
+      </div>
+    </footer>
+    <script src="js/site.js"></script>
+  </body>
+</html>

@@ -1,0 +1,223 @@
+/* Typewave design tokens — Material You ("Tide & Coral"), shared by the extension and the website.
+   Seed: electric ultramarine #3D5AFE (speed, typing energy). Accent: coral, used sparingly.
+   Radius philosophy: ROUND everywhere (M3 full / extra-large). Grid: 4/8px. */
+
+@font-face {
+  font-family: "Roboto Flex";
+  src: url("../fonts/roboto-flex-latin.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Plex Mono";
+  src: url("../fonts/ibm-plex-mono-400.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+  /* Primary — ultramarine tonal scale */
+  --tw-primary-10: #000f5c;
+  --tw-primary-20: #00218f;
+  --tw-primary-30: #1a37c4;
+  --tw-primary-40: #3450de;
+  --tw-primary-50: #536cf7;
+  --tw-primary-60: #7389ff;
+  --tw-primary-70: #98a6ff;
+  --tw-primary-80: #bcc3ff;
+  --tw-primary-90: #dfe0ff;
+  --tw-primary-95: #f0efff;
+  --tw-primary-99: #fffbff;
+  /* Neutral (slightly blue-tinted, never pure black/white) */
+  --tw-neutral-6: #121319;
+  --tw-neutral-10: #1b1b22;
+  --tw-neutral-12: #1f1f26;
+  --tw-neutral-17: #292931;
+  --tw-neutral-22: #34343c;
+  --tw-neutral-30: #46464f;
+  --tw-neutral-50: #767680;
+  --tw-neutral-80: #c6c5d0;
+  --tw-neutral-90: #e4e1ec;
+  --tw-neutral-94: #efecf7;
+  --tw-neutral-96: #f5f2fd;
+  --tw-neutral-98: #fbf8ff;
+
+  /* Semantic roles (light) */
+  --primary: #3450de;
+  --on-primary: #fbfaff;
+  --primary-container: #dfe0ff;
+  --on-primary-container: #00218f;
+  --secondary: #5a5d78;
+  --secondary-container: #e0e0ff;
+  --on-secondary-container: #171a31;
+  --tertiary: #b0245a;
+  --on-tertiary: #fff8f9;
+  --tertiary-container: #ffd9e2;
+  --on-tertiary-container: #3f0019;
+  --surface: #fbf8ff;
+  --surface-dim: #dbd9e3;
+  --surface-container-lowest: #fefcff;
+  --surface-container-low: #f5f2fd;
+  --surface-container: #efecf7;
+  --surface-container-high: #e9e7f1;
+  --surface-container-highest: #e4e1ec;
+  --on-surface: #1b1b22;
+  --on-surface-variant: #46464f;
+  --outline: #767680;
+  --outline-variant: #c6c5d0;
+  --inverse-surface: #303038;
+  --inverse-on-surface: #f2effa;
+  --success: #1b6d3f;
+  --success-container: #a6f4bb;
+  --on-success-container: #00210e;
+  --warning: #7a5900;
+  --warning-container: #ffdf9e;
+  --on-warning-container: #261a00;
+  --danger: #ba1a1a;
+  --danger-container: #ffdad6;
+  --on-danger-container: #410002;
+  --scrim: rgba(18, 19, 25, 0.42);
+
+  /* Wave gradient (the signature) */
+  --wave-a: #536cf7;
+  --wave-b: #8b5cf6;
+  --wave-c: #ff5c8a;
+
+  /* Type */
+  --font: "Roboto Flex", Roboto, "Segoe UI", system-ui, sans-serif;
+  --mono: "Plex Mono", "IBM Plex Mono", ui-monospace, Consolas, monospace;
+  --fs-12: 12px;
+  --fs-14: 14px;
+  --fs-16: 16px;
+  --fs-20: 20px;
+  --fs-24: 24px;
+  --fs-32: 32px;
+  --fs-40: 40px;
+  --fs-56: 56px;
+
+  /* Spacing (4/8 grid) */
+  --s-4: 4px;
+  --s-8: 8px;
+  --s-12: 12px;
+  --s-16: 16px;
+  --s-24: 24px;
+  --s-32: 32px;
+  --s-48: 48px;
+  --s-64: 64px;
+
+  /* Shape — round */
+  --r-sm: 12px;
+  --r-md: 16px;
+  --r-lg: 24px;
+  --r-xl: 32px;
+  --r-full: 999px;
+
+  /* Elevation (layered, subtle) */
+  --e-1: 0 1px 2px rgba(20, 22, 60, 0.08), 0 1px 3px 1px rgba(20, 22, 60, 0.05);
+  --e-2: 0 1px 2px rgba(20, 22, 60, 0.1), 0 2px 6px 2px rgba(20, 22, 60, 0.06);
+  --e-3: 0 4px 8px 3px rgba(20, 22, 60, 0.08), 0 1px 3px rgba(20, 22, 60, 0.1);
+  --e-4: 0 6px 10px 4px rgba(20, 22, 60, 0.09), 0 2px 3px rgba(20, 22, 60, 0.12);
+  --e-5: 0 8px 12px 6px rgba(20, 22, 60, 0.1), 0 4px 4px rgba(20, 22, 60, 0.12);
+
+  /* Motion (M3 expressive easing) */
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --duration-slow: 320ms;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --ease-out: cubic-bezier(0.05, 0.7, 0.1, 1);
+  --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --primary: #bcc3ff;
+    --on-primary: #002391;
+    --primary-container: #1a37c4;
+    --on-primary-container: #dfe0ff;
+    --secondary: #c3c4e4;
+    --secondary-container: #42455f;
+    --on-secondary-container: #e0e0ff;
+    --tertiary: #ffb1c6;
+    --on-tertiary: #65002d;
+    --tertiary-container: #8e0a43;
+    --on-tertiary-container: #ffd9e2;
+    --surface: #121319;
+    --surface-dim: #121319;
+    --surface-container-lowest: #0d0e14;
+    --surface-container-low: #1b1b22;
+    --surface-container: #1f1f26;
+    --surface-container-high: #292931;
+    --surface-container-highest: #34343c;
+    --on-surface: #e4e1ec;
+    --on-surface-variant: #c6c5d0;
+    --outline: #90909a;
+    --outline-variant: #46464f;
+    --inverse-surface: #e4e1ec;
+    --inverse-on-surface: #303038;
+    --success: #8bd7a0;
+    --success-container: #00522b;
+    --on-success-container: #a6f4bb;
+    --warning: #f2c048;
+    --warning-container: #5c4300;
+    --on-warning-container: #ffdf9e;
+    --danger: #ffb4ab;
+    --danger-container: #93000a;
+    --on-danger-container: #ffdad6;
+    --scrim: rgba(0, 0, 0, 0.56);
+    --wave-a: #7389ff;
+    --wave-b: #a78bfa;
+    --wave-c: #ff85a6;
+    --e-1: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+    --e-2: 0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 2px rgba(0, 0, 0, 0.15);
+    --e-3: 0 4px 8px 3px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.3);
+    --e-4: 0 6px 10px 4px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.3);
+    --e-5: 0 8px 12px 6px rgba(0, 0, 0, 0.15), 0 4px 4px rgba(0, 0, 0, 0.3);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --primary: #bcc3ff;
+  --on-primary: #002391;
+  --primary-container: #1a37c4;
+  --on-primary-container: #dfe0ff;
+  --secondary: #c3c4e4;
+  --secondary-container: #42455f;
+  --on-secondary-container: #e0e0ff;
+  --tertiary: #ffb1c6;
+  --on-tertiary: #65002d;
+  --tertiary-container: #8e0a43;
+  --on-tertiary-container: #ffd9e2;
+  --surface: #121319;
+  --surface-dim: #121319;
+  --surface-container-lowest: #0d0e14;
+  --surface-container-low: #1b1b22;
+  --surface-container: #1f1f26;
+  --surface-container-high: #292931;
+  --surface-container-highest: #34343c;
+  --on-surface: #e4e1ec;
+  --on-surface-variant: #c6c5d0;
+  --outline: #90909a;
+  --outline-variant: #46464f;
+  --inverse-surface: #e4e1ec;
+  --inverse-on-surface: #303038;
+  --success: #8bd7a0;
+  --success-container: #00522b;
+  --on-success-container: #a6f4bb;
+  --warning: #f2c048;
+  --warning-container: #5c4300;
+  --on-warning-container: #ffdf9e;
+  --danger: #ffb4ab;
+  --danger-container: #93000a;
+  --on-danger-container: #ffdad6;
+  --scrim: rgba(0, 0, 0, 0.56);
+  --wave-a: #7389ff;
+  --wave-b: #a78bfa;
+  --wave-c: #ff85a6;
+  --e-1: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+  --e-2: 0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 2px rgba(0, 0, 0, 0.15);
+  --e-3: 0 4px 8px 3px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.3);
+  --e-4: 0 6px 10px 4px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.3);
+  --e-5: 0 8px 12px 6px rgba(0, 0, 0, 0.15), 0 4px 4px rgba(0, 0, 0, 0.3);
+}

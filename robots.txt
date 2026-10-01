@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /checkout.html
+Disallow: /uninstall.html
+
+Sitemap: https://typewave-fenwick.vercel.app/sitemap.xml

@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Typewave: AI Text Expander for Chrome · Type a shortcut, send the whole message</title>
+    <meta name="description" content="Typewave is a Chrome text expander. Type /intro and get the full email, with fill-in fields, snippet packs, and private on-device AI. Free to start." />
+    <link rel="canonical" href="https://typewave-fenwick.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Typewave: type a shortcut, send the whole message" />
+    <meta property="og:description" content="Text expander for Chrome with fill-in fields, snippet packs, and private on-device AI." />
+    <meta property="og:url" content="https://typewave-fenwick.vercel.app/" />
+    <meta property="og:image" content="https://typewave-fenwick.vercel.app/assets/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#3450de" />
+    <link rel="icon" href="assets/favicon.png" />
+    <link rel="preload" href="fonts/roboto-flex-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/m3.css" />
+    <link rel="stylesheet" href="css/site.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Typewave",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Chrome",
+        "description": "Text expander for Chrome with fill-in fields, snippet packs, and private on-device AI.",
+        "offers": [
+          { "@type": "Offer", "price": "0", "priceCurrency": "USD", "name": "Free" },
+          { "@type": "Offer", "price": "39", "priceCurrency": "USD", "name": "Pro yearly" },
+          { "@type": "Offer", "price": "79", "priceCurrency": "USD", "name": "Pro lifetime" }
+        ],
+        "publisher": { "@type": "Organization", "name": "Fenwick Labs" }
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="/"><img src="assets/logo.png" alt="" width="32" height="32" />Typewave</a>
+        <nav class="nav" aria-label="Main">
+          <a href="#how">How it works</a>
+          <a href="#ai">AI</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <a class="btn btn-filled" data-install href="#">Add to Chrome</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ================= Hero ================= -->
+      <section class="hero">
+        <span class="orb o1" aria-hidden="true"></span>
+        <span class="orb o2" aria-hidden="true"></span>
+        <div class="wrap hero-grid">
+          <div>
+            <span class="eyebrow"><span class="badge badge-pro">New</span> Private AI built in, no API keys</span>
+            <h1>Type a shortcut.<br /><span class="grad">Send the whole message.</span></h1>
+            <p class="lede">Typewave turns <code class="tag">/intro</code> into your full cold email, <code class="tag">/refund</code> into a perfect support reply, and <code class="tag">/sig</code> into your signature. It works in Gmail, LinkedIn, Slack, help desks, and every text box on the web.</p>
+            <div class="cta-row">
+              <a class="btn btn-filled btn-lg" data-install href="#">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 16 6.5 10.5l1.4-1.4 3.1 3.1V3h2v9.2l3.1-3.1 1.4 1.4zM5 19h14v2H5z" /></svg>
+                Add to Chrome, it's free
+              </a>
+              <a class="btn btn-tonal btn-lg" href="#pricing">See Pro</a>
+            </div>
+            <p class="trust">
+              <span class="stars" aria-hidden="true">★★★★★</span>
+              <span>From Fenwick Labs · 6 five-star Chrome extensions · 2,000+ installs</span>
+            </p>
+          </div>
+
+          <div class="demo" aria-label="Animated example: typing /intro in an email expands into a full message">
+            <div class="demo-bar"><i></i><i></i><i></i><span>New message</span></div>
+            <div class="demo-body">
+              <div class="demo-row"><span>To</span><b id="demo-to">jordan@northwind.com</b></div>
+              <div class="demo-row"><span>Subject</span><b id="demo-subject">Quick idea for Northwind</b></div>
+              <div class="demo-text" id="demo-text" aria-hidden="true"></div>
+            </div>
+            <div class="demo-toast" id="demo-toast" aria-hidden="true">✨ <span id="demo-saved">Saved 214 keystrokes</span></div>
+          </div>
+        </div>
+        <div class="waves" aria-hidden="true">
+          <svg class="wave-layer slow" viewBox="0 0 1600 180" preserveAspectRatio="none"><path class="w-a" d="M0 60 C200 10 200 110 400 60 S600 10 800 60 S1000 110 1200 60 S1400 10 1600 60 V180 H0Z" /></svg>
+          <svg class="wave-layer" viewBox="0 0 1600 180" preserveAspectRatio="none"><path class="w-b" d="M0 95 C200 140 200 50 400 95 S600 140 800 95 S1000 50 1200 95 S1400 140 1600 95 V180 H0Z" /></svg>
+          <svg class="wave-layer fast" viewBox="0 0 1600 180" preserveAspectRatio="none"><path class="w-c" d="M0 130 C200 105 200 155 400 130 S600 105 800 130 S1000 155 1200 130 S1400 105 1600 130 V180 H0Z" /></svg>
+        </div>
+      </section>
+
+      <!-- ================= Where ================= -->
+      <section class="band band-alt" id="how" aria-labelledby="how-title">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="kicker">How it works</span>
+            <h2 id="how-title">Write it once. Use it everywhere, forever.</h2>
+            <p>Save a reply as a snippet, give it a short shortcut, and type that shortcut anywhere. Typewave swaps it for the full text before you blink, with today's date, the client's name, and your cursor right where you need it.</p>
+          </div>
+          <div class="where" aria-label="Works in">
+            <span>Gmail</span><span>Outlook on the web</span><span>LinkedIn</span><span>Slack</span><span>Zendesk</span><span>Intercom</span><span>HubSpot</span><span>Salesforce</span><span>Notion</span><span>WhatsApp Web</span><span>Freshdesk</span><span>Upwork</span><span>Any text box</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= Calculator ================= -->
+      <section class="band" aria-labelledby="calc-title">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="kicker">Your time, measured</span>
+            <h2 id="calc-title">How much typing are you giving away?</h2>
+            <p>Move the sliders to match your week.</p>
+          </div>
+          <div class="calc">
+            <form id="calc">
+              <div class="field">
+                <label for="c-msgs">Repeat messages per day <output for="c-msgs" id="o-msgs">20</output></label>
+                <input type="range" id="c-msgs" min="2" max="120" value="20" />
+              </div>
+              <div class="field">
+                <label for="c-len">Average length (characters) <output for="c-len" id="o-len">280</output></label>
+                <input type="range" id="c-len" min="40" max="1200" step="20" value="280" />
+              </div>
+              <div class="field">
+                <label for="c-rate">What an hour of your time is worth <output for="c-rate" id="o-rate">$40</output></label>
+                <input type="range" id="c-rate" min="10" max="250" step="5" value="40" />
+              </div>
+              <p class="field-hint">Based on 40 words per minute and 230 working days a year.</p>
+            </form>
+            <div class="calc-result" aria-live="polite">
+              <p style="margin:0;font-weight:600;letter-spacing:.04em;text-transform:uppercase;font-size:13px">Typewave gives you back</p>
+              <div class="big" id="r-hours">107 h</div>
+              <p id="r-sub">a year, worth about $4,293 of your time.</p>
+              <p style="font-weight:700" id="r-roi">Pro costs $39 a year. That's a 110× return.</p>
+              <div class="waves" aria-hidden="true">
+                <svg class="wave-layer slow" viewBox="0 0 1600 90" preserveAspectRatio="none"><path class="w-a" d="M0 40 C200 10 200 70 400 40 S600 10 800 40 S1000 70 1200 40 S1400 10 1600 40 V90 H0Z" /></svg>
+                <svg class="wave-layer" viewBox="0 0 1600 90" preserveAspectRatio="none"><path class="w-c" d="M0 60 C200 80 200 40 400 60 S600 80 800 60 S1000 40 1200 60 S1400 80 1600 60 V90 H0Z" /></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= Features ================= -->
+      <section class="band band-alt" aria-labelledby="feat-title">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="kicker">Built for people who write for a living</span>
+            <h2 id="feat-title">More than copy and paste</h2>
+          </div>
+
+          <div class="features">
+            <article class="feature">
+              <div>
+                <span class="kicker">Fill-in fields</span>
+                <h3>Personal every time, typed once</h3>
+                <p>Add <code class="tag">{input:First name}</code> or a dropdown to any snippet. Typewave asks as you insert it, so every "template" reads like you wrote it just now. Dates move on their own: <code class="tag">{date+3d}</code> is always three days from today.</p>
+              </div>
+              <div class="f-art" aria-hidden="true">
+                <div class="mock-card">
+                  <div class="mock-field"><small>First name</small>Priya</div>
+                  <div style="height:8px"></div>
+                  <div class="mock-field"><small>Plan</small>Growth ▾</div>
+                </div>
+                <div class="mock-card">Hi <b class="grad">Priya</b>, the <b class="grad">Growth</b> plan fits what you described. I'll send the breakdown by Thursday.</div>
+              </div>
+            </article>
+
+            <article class="feature" id="ai">
+              <div>
+                <span class="kicker">Private AI</span>
+                <h3>AI that runs on your computer</h3>
+                <p>Describe a message and Typewave drafts the snippet, with fill-in fields already placed. Rewrite any snippet shorter, friendlier, or more formal in one click. It uses the AI built into Chrome, so your words never leave your device, and there's no per-message fee.</p>
+              </div>
+              <div class="f-art" aria-hidden="true">
+                <div class="mock-card"><small style="color:var(--on-surface-variant);font-weight:600">Describe it</small><br />Politely decline a meeting and offer to reply by email</div>
+                <div class="ai-chip-row"><span>Friendly</span><span>Formal</span><span>Direct</span><span>Shorter</span></div>
+                <svg class="wavy-progress" viewBox="0 0 240 12" preserveAspectRatio="none"><path d="M0 6 Q6 0 12 6 T24 6 T36 6 T48 6 T60 6 T72 6 T84 6 T96 6 T108 6 T120 6 T132 6 T144 6 T156 6 T168 6 T180 6 T192 6 T204 6 T216 6 T228 6 T240 6" fill="none" stroke="var(--primary)" stroke-width="3" stroke-linecap="round" stroke-dasharray="12 12" /></svg>
+              </div>
+            </article>
+
+            <article class="feature">
+              <div>
+                <span class="kicker">Instant picker</span>
+                <h3>Forgot a shortcut? Search it.</h3>
+                <p>Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Space</kbd> on any page to search every snippet by name or text, then press Enter to insert it. Right-click any text you've written to save it as a new snippet.</p>
+              </div>
+              <div class="f-art" aria-hidden="true">
+                <div class="mock-card mock-list">
+                  <div><code>/refund</code> Refund issued</div>
+                  <div><code>/bug</code> Bug acknowledged</div>
+                  <div><code>/esc</code> Escalation</div>
+                  <div><code>/close</code> Closing</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="feature">
+              <div>
+                <span class="kicker">Private by design</span>
+                <h3>Your snippets stay yours</h3>
+                <p>Snippets live in your browser. Pro sync uses your own Chrome sync, so Typewave's servers never see your text. No tracking, no ads, and export to a file any time.</p>
+              </div>
+              <div class="f-art" aria-hidden="true">
+                <div class="lock">
+                  <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 1 3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5zm0 10.9h7c-.5 4.1-3.3 7.8-7 8.9zM12 12H5V6.3l7-3.1z" /></svg>
+                  <span>Stored on your computer.<br />Synced through your own Chrome account.</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= Use cases ================= -->
+      <section class="band" aria-labelledby="uc-title">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="kicker">Snippet packs</span>
+            <h2 id="uc-title">Start with replies written for your job</h2>
+            <p>Add a pack in one click, then make each snippet yours.</p>
+          </div>
+          <div class="tabs" role="tablist" aria-label="Roles" id="uc-tabs"></div>
+          <div id="uc-panel" role="tabpanel"></div>
+        </div>
+      </section>
+
+      <!-- ================= Pricing ================= -->
+      <section class="band band-alt" id="pricing" aria-labelledby="pr-title">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="kicker">Pricing</span>
+            <h2 id="pr-title">Free to start. Pro when it pays for itself.</h2>
+            <p>No subscription traps: nothing renews automatically.</p>
+          </div>
+          <div class="price-grid">
+            <article class="price-card">
+              <h3>Free</h3>
+              <div class="amt">$0</div>
+              <p class="price-note">Forever</p>
+              <ul>
+                <li>25 snippets</li>
+                <li>Dates, times, cursor, and clipboard</li>
+                <li>Snippet picker on every site</li>
+                <li>Everyday snippet pack</li>
+                <li>Time-saved insights</li>
+              </ul>
+              <a class="btn btn-tonal" data-install href="#">Add to Chrome</a>
+            </article>
+            <article class="price-card best">
+              <span class="badge flag" id="save-flag">Save 35%</span>
+              <h3>Pro · Yearly</h3>
+              <div class="amt"><span data-price="yearly">$39</span><span class="per"> / year</span></div>
+              <p class="price-note">Or <span data-price="monthly">$4.99</span> a month, month by month</p>
+              <ul>
+                <li><strong>Unlimited</strong> snippets</li>
+                <li>Fill-in fields and dropdowns</li>
+                <li>AI Writer and one-click rewrite, on-device</li>
+                <li>Every snippet pack</li>
+                <li>Sync across your computers</li>
+                <li>Site rules per snippet</li>
+              </ul>
+              <a class="btn btn-filled" href="checkout.html?term=yearly">Get Pro yearly</a>
+              <div class="waves" aria-hidden="true">
+                <svg class="wave-layer slow" viewBox="0 0 1600 70" preserveAspectRatio="none"><path class="w-a" d="M0 30 C200 5 200 55 400 30 S600 5 800 30 S1000 55 1200 30 S1400 5 1600 30 V70 H0Z" /></svg>
+                <svg class="wave-layer" viewBox="0 0 1600 70" preserveAspectRatio="none"><path class="w-c" d="M0 45 C200 65 200 25 400 45 S600 65 800 45 S1000 25 1200 45 S1400 65 1600 45 V70 H0Z" /></svg>
+              </div>
+            </article>
+            <article class="price-card">
+              <h3>Pro · Lifetime</h3>
+              <div class="amt"><span data-price="lifetime">$79</span><span class="per"> once</span></div>
+              <p class="price-note">Pay once, keep every future update</p>
+              <ul>
+                <li>Everything in Pro</li>
+                <li>No renewals, ever</li>
+                <li>Best for freelancers and small teams</li>
+              </ul>
+              <a class="btn btn-tonal" href="checkout.html?term=lifetime">Get lifetime</a>
+            </article>
+          </div>
+          <p class="field-hint" style="text-align:center;margin-top:24px">Prices in USD before tax; you'll see your local currency and tax at checkout. Pay with PayPal or card. 14-day refund. <a href="pricing.html">Compare plans</a></p>
+        </div>
+      </section>
+
+      <!-- ================= FAQ ================= -->
+      <section class="band" id="faq" aria-labelledby="faq-title">
+        <div class="wrap">
+          <div class="sec-head"><span class="kicker">FAQ</span><h2 id="faq-title">Questions, answered</h2></div>
+          <div class="faq">
+            <details><summary>Where does Typewave work?</summary><p>In almost every text box in Chrome: Gmail, Outlook on the web, LinkedIn, Slack, Zendesk, Intercom, HubSpot, Salesforce, Notion, WhatsApp Web, and ordinary web forms. Google Docs draws its own text, so there you use the picker to copy a snippet and paste it. Typewave never runs in password fields.</p></details>
+            <details><summary>Do I need an account?</summary><p>No. Typewave works the moment you install it. You only sign in with Google if you buy Pro, so your plan follows you to every computer.</p></details>
+            <details><summary>Is the AI really private? Does it cost extra?</summary><p>Typewave uses Gemini Nano, the AI model built into Chrome. It runs on your computer, so the text you write stays there, and there's no per-message cost. It needs Chrome 138 or newer on a desktop with enough memory; Typewave tells you if yours can't run it.</p></details>
+            <details><summary>What happens if I stop paying?</summary><p>Nothing renews automatically. When your Pro time ends, Typewave switches to Free and keeps every snippet. Fill-in fields then insert their default text until you upgrade again.</p></details>
+            <details><summary>Can I bring snippets from another text expander?</summary><p>Yes. Export from your current tool as JSON and import it under Settings → Backup. Typewave understands the common formats (shortcut / abbreviation plus text / content).</p></details>
+            <details><summary>How do refunds work?</summary><p>If Typewave Pro isn't right for you, email us within 14 days of paying and we'll refund you in full. <a href="refund.html">Refund policy</a></p></details>
+            <details><summary>Which payment methods do you accept?</summary><p>PayPal (balance or any card) worldwide, and cards through Razorpay, plus UPI in India. Tax for your country is shown before you pay.</p></details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= Final CTA ================= -->
+      <section class="final" aria-labelledby="final-title">
+        <div class="wrap">
+          <h2 id="final-title">Stop typing the same thing twice.</h2>
+          <p>Install in ten seconds. Your first shortcut works before this page finishes loading.</p>
+          <a class="btn btn-filled btn-lg" data-install href="#">Add Typewave to Chrome</a>
+        </div>
+        <div class="waves" aria-hidden="true">
+          <svg class="wave-layer slow" viewBox="0 0 1600 180" preserveAspectRatio="none"><path class="w-a" d="M0 60 C200 10 200 110 400 60 S600 10 800 60 S1000 110 1200 60 S1400 10 1600 60 V180 H0Z" /></svg>
+          <svg class="wave-layer" viewBox="0 0 1600 180" preserveAspectRatio="none"><path class="w-b" d="M0 95 C200 140 200 50 400 95 S600 140 800 95 S1000 50 1200 95 S1400 140 1600 95 V180 H0Z" /></svg>
+          <svg class="wave-layer fast" viewBox="0 0 1600 180" preserveAspectRatio="none"><path class="w-c" d="M0 130 C200 105 200 155 400 130 S600 105 800 130 S1000 155 1200 130 S1400 105 1600 130 V180 H0Z" /></svg>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <span>© <span id="year">2026</span> Fenwick Labs · Typewave</span>
+        <nav aria-label="Legal and support">
+          <a href="pricing.html">Pricing</a>
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms</a>
+          <a href="refund.html">Refund Policy</a>
+          <a href="mailto:support@fenwicklabs.app">support@fenwicklabs.app</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="js/site.js"></script>
+  </body>
+</html>

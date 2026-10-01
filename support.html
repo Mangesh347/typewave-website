@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Support · Typewave</title>
+    <meta name="description" content="Help with Typewave: setup, shortcuts, fill-in fields, AI, sync, billing, and contact." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://typewave-fenwick.vercel.app/support.html" />
+    <meta property="og:title" content="Support · Typewave" />
+    <meta property="og:description" content="Help with Typewave: setup, shortcuts, fill-in fields, AI, sync, billing, and contact." />
+    <meta property="og:image" content="https://typewave-fenwick.vercel.app/assets/og-image.png" />
+    <meta name="theme-color" content="#3450de" />
+    <link rel="icon" href="assets/favicon.png" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/m3.css" />
+    <link rel="stylesheet" href="css/site.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="/"><img src="assets/logo.png" alt="" width="32" height="32" />Typewave</a>
+        <nav class="nav" aria-label="Main">
+          <a href="/#how">How it works</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="support.html" aria-current="page">Support</a>
+        </nav>
+        <a class="btn btn-filled" data-install href="#">Add to Chrome</a>
+      </div>
+    </header>
+    <main id="main" class="doc">
+      <h1>Support</h1>
+      <p class="updated">We answer every email, usually within one business day: <a href="mailto:support@fenwicklabs.app">support@fenwicklabs.app</a></p>
+
+      <h2>Getting started</h2>
+      <ol>
+        <li>Install Typewave from the Chrome Web Store. It adds six starter snippets like <code class="tag">/ty</code> and <code class="tag">/sig</code>.</li>
+        <li>Click in any text box and type <code class="tag">/ty</code>. It becomes the full text right away.</li>
+        <li>Click the Typewave toolbar button → <strong>New snippet</strong> to write your own.</li>
+      </ol>
+
+      <h2>A shortcut didn't expand</h2>
+      <ul>
+        <li>Reload tabs that were open before you installed Typewave; Chrome only adds it to pages loaded afterwards.</li>
+        <li>Check that the site isn't paused: click the Typewave button and look at the switch for this site.</li>
+        <li>Google Docs, Sheets, and some code editors draw their own text, so expansion can't work there. Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd> to copy a snippet and paste it.</li>
+        <li>Chrome pages (chrome://…) and the Chrome Web Store block all extensions.</li>
+      </ul>
+
+      <h2>Two shortcuts clash</h2>
+      <p>If <code class="tag">/ty</code> fires while you're typing <code class="tag">/typo</code>, open Settings → General → "When to expand" and choose <strong>After I press Space</strong>. Then each shortcut expands only when you finish it with a space.</p>
+
+      <h2>Placeholders</h2>
+      <table>
+        <thead><tr><th>Type this</th><th>You get</th></tr></thead>
+        <tbody>
+          <tr><td><code class="tag">{cursor}</code></td><td>The caret lands here after inserting</td></tr>
+          <tr><td><code class="tag">{date}</code>, <code class="tag">{date:YYYY-MM-DD}</code></td><td>Today's date, optionally formatted</td></tr>
+          <tr><td><code class="tag">{date+3d:MMM D}</code></td><td>A date 3 days from today (also w, m, y)</td></tr>
+          <tr><td><code class="tag">{time}</code>, <code class="tag">{day}</code></td><td>Current time, weekday name</td></tr>
+          <tr><td><code class="tag">{clipboard}</code></td><td>What you copied last</td></tr>
+          <tr><td><code class="tag">{input:First name}</code></td><td>Asks you each time (Pro)</td></tr>
+          <tr><td><code class="tag">{choice:Plan=Basic|Pro}</code></td><td>A dropdown (Pro)</td></tr>
+          <tr><td><code class="tag">{snippet:/sig}</code></td><td>Another snippet inside this one</td></tr>
+        </tbody>
+      </table>
+
+      <h2>AI Writer says it isn't available</h2>
+      <p>Typewave's AI uses the model built into Chrome. It needs Chrome 138 or newer on Windows 10/11, macOS 13+, or Linux, about 22 GB of free disk space, and either a GPU with more than 4 GB of memory or 16 GB of RAM. Chromebooks and phones aren't supported yet.</p>
+
+      <h2>Pro isn't showing after I paid</h2>
+      <ol>
+        <li>Open Typewave → Settings → Account and click <strong>I already paid</strong> / <strong>Check again</strong>.</li>
+        <li>Make sure you signed in with the same Google account you paid with.</li>
+        <li>Still stuck? Email us your PayPal or Razorpay payment ID and we'll fix it the same day.</li>
+      </ol>
+
+      <h2>Moving to a new computer</h2>
+      <p>With Pro, turn on Settings → Sync on both computers. On Free, use Settings → Backup → Export and import the file on the new computer.</p>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap">
+        <span>© <span id="year">2026</span> Fenwick Labs · Typewave</span>
+        <nav aria-label="Legal and support">
+          <a href="pricing.html">Pricing</a>
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms</a>
+          <a href="refund.html">Refund Policy</a>
+          <a href="mailto:support@fenwicklabs.app">support@fenwicklabs.app</a>
+        </nav>
+      </div>
+    </footer>
+    <script src="js/site.js"></script>
+  </body>
+</html>

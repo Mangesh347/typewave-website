@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pricing · Typewave text expander for Chrome</title>
+    <meta name="description" content="Typewave is free for 25 snippets. Pro adds unlimited snippets, fill-in fields, private on-device AI, every snippet pack, and sync. Monthly, yearly, or lifetime." />
+    <link rel="canonical" href="https://typewave-fenwick.vercel.app/pricing.html" />
+    <meta property="og:title" content="Typewave pricing" />
+    <meta property="og:description" content="Free for 25 snippets. Pro: unlimited snippets, fill-in fields, private AI, sync." />
+    <meta property="og:image" content="https://typewave-fenwick.vercel.app/assets/og-image.png" />
+    <link rel="icon" href="assets/favicon.png" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/m3.css" />
+    <link rel="stylesheet" href="css/site.css" />
+    <style>
+      .compare { width: 100%; border-collapse: separate; border-spacing: 0; border-radius: 28px; overflow: hidden; background: var(--surface-container-lowest); border: 1px solid var(--outline-variant); }
+      .compare th, .compare td { padding: 14px 20px; text-align: left; border-bottom: 1px solid var(--outline-variant); }
+      .compare thead th { background: var(--surface-container); font-size: 14px; }
+      .compare td:not(:first-child), .compare th:not(:first-child) { text-align: center; width: 22%; }
+      .compare tr:last-child td { border-bottom: 0; }
+      .yes { color: var(--primary); font-weight: 700; }
+      .no { color: var(--outline); }
+      .pro-box { max-width: 560px; margin: 0 auto 48px; text-align: center; }
+      .pro-box .amt { font-size: 64px; font-weight: 800; letter-spacing: -0.04em; line-height: 1; margin: 16px 0 8px; }
+      .pro-box .per { font-size: 18px; color: var(--on-surface-variant); font-weight: 500; }
+      @media (max-width: 520px) {
+        .compare th, .compare td { padding: 10px 12px; font-size: 14px; }
+        .seg button { padding: 8px 10px; }
+        .pro-box { padding: 20px 12px; }
+        .pro-box .amt { font-size: 48px; }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="/"><img src="assets/logo.png" alt="" width="32" height="32" />Typewave</a>
+        <nav class="nav" aria-label="Main">
+          <a href="/#how">How it works</a>
+          <a href="pricing.html" aria-current="page">Pricing</a>
+          <a href="support.html">Support</a>
+        </nav>
+        <a class="btn btn-filled" data-install href="#">Add to Chrome</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="band">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="kicker">Pricing</span>
+            <h1 class="sec-title" style="font-size:clamp(34px,5vw,56px);letter-spacing:-.03em;margin:8px 0 12px">Typewave Pro</h1>
+            <p>Everything in Free, without limits. Nothing renews automatically.</p>
+          </div>
+
+          <div class="pro-box card card-elevated">
+            <div class="seg-row" style="margin-bottom:0">
+              <div class="seg" role="radiogroup" aria-label="Plan length" id="termSeg">
+                <button type="button" role="radio" data-term="monthly" aria-checked="false">Monthly</button>
+                <button type="button" role="radio" data-term="yearly" aria-checked="true">Yearly <span class="badge" id="yearlySave" hidden></span></button>
+                <button type="button" role="radio" data-term="lifetime" aria-checked="false">Lifetime</button>
+              </div>
+              <div class="seg" role="radiogroup" aria-label="Currency" id="currencySeg" hidden></div>
+            </div>
+            <div class="amt"><span id="proAmount">$39</span><span class="per" id="proPer">/year</span></div>
+            <p class="price-note" id="proPriceNote">365 days of Pro. No auto-renewal.</p>
+            <p style="margin:24px 0 0"><a class="btn btn-filled btn-lg" id="proCta" href="checkout.html?term=yearly">Continue to checkout</a></p>
+            <p class="field-hint" style="margin-top:16px">Pay with PayPal or card. 14-day money-back guarantee.</p>
+          </div>
+
+          <table class="compare">
+            <caption class="sr-only">Free and Pro compared</caption>
+            <thead><tr><th scope="col">Feature</th><th scope="col">Free</th><th scope="col">Pro</th></tr></thead>
+            <tbody>
+              <tr><td>Snippets</td><td>25</td><td class="yes">Unlimited</td></tr>
+              <tr><td>Works in every text box (Gmail, LinkedIn, Slack, help desks…)</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+              <tr><td>Dates, times, cursor, clipboard placeholders</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+              <tr><td>Snippet picker (Ctrl+Shift+Space)</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+              <tr><td>Insights: time saved and top snippets</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+              <tr><td>Import and export</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+              <tr><td>Fill-in fields and dropdowns</td><td class="no">Defaults only</td><td class="yes">✓</td></tr>
+              <tr><td>AI Writer and one-click rewrite (on-device)</td><td class="no">—</td><td class="yes">✓</td></tr>
+              <tr><td>Snippet packs</td><td>Everyday</td><td class="yes">All 6</td></tr>
+              <tr><td>Sync across computers</td><td class="no">—</td><td class="yes">✓</td></tr>
+              <tr><td>Site rules per snippet</td><td class="no">—</td><td class="yes">✓</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="band band-alt" aria-labelledby="pfaq">
+        <div class="wrap">
+          <div class="sec-head"><h2 id="pfaq">Billing questions</h2></div>
+          <div class="faq">
+            <details><summary>Does it renew automatically?</summary><p>No. Monthly gives you 30 days and Yearly gives you 365 days. We show the end date, and you can buy more time whenever you like. Buying again adds time to the end of your current plan.</p></details>
+            <details><summary>What's included in Lifetime?</summary><p>Every Pro feature, now and in future updates, for a single payment.</p></details>
+            <details><summary>Which currencies and payment methods?</summary><p>Prices show in USD, EUR, GBP, AUD, CAD, or INR depending on where you are. PayPal works worldwide. Cards are processed by Razorpay; buyers in India can also use UPI.</p></details>
+            <details><summary>Is tax included?</summary><p>Prices are shown before tax. If your country charges VAT or GST on digital services, it's added as its own line at checkout before you pay.</p></details>
+            <details><summary>Can I get a refund?</summary><p>Yes, within 14 days of paying, no questions asked. See the <a href="refund.html">refund policy</a>.</p></details>
+            <details><summary>How do I use Pro on another computer?</summary><p>Install Typewave there, open Settings → Account, and sign in with the same Google account. Turn on Sync to bring your snippets along.</p></details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <span>© <span id="year">2026</span> Fenwick Labs · Typewave</span>
+        <nav aria-label="Legal and support">
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms</a>
+          <a href="refund.html">Refund Policy</a>
+          <a href="mailto:support@fenwicklabs.app">support@fenwicklabs.app</a>
+        </nav>
+      </div>
+    </footer>
+    <script src="js/site.js"></script>
+    <script src="js/pricing.js"></script>
+  </body>
+</html>
